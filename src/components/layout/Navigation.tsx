@@ -1,4 +1,4 @@
-import NavLinks from './NavLinks';
+import Tabs from './Tabs';
 
 type NavigationProps = {
   title?: string;
@@ -11,7 +11,7 @@ function Navigation({ title = 'Alejandro LR' }: NavigationProps) {
         <h1 className='text-xl font-medium'>{title}</h1>
       </div>
       <nav className='flex flex-col items-center justify-center'>
-        <NavLinks />
+        <Tabs />
       </nav>
     </header>
   );

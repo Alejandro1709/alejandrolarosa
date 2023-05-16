@@ -1,4 +1,4 @@
-export default interface ILink {
+export default interface ITab {
   name: string;
   label: string;
   href: string;

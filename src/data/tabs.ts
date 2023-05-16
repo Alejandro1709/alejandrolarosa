@@ -1,6 +1,6 @@
-import type ILink from '@/types/link';
+import type ILink from '@/types/tab';
 
-const links: ILink[] = [
+const tabs: ILink[] = [
   {
     name: 'work',
     label: 'Work',
@@ -23,4 +23,4 @@ const links: ILink[] = [
   },
 ];
 
-export default links;
+export default tabs;
