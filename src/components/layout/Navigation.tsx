@@ -1,4 +1,4 @@
-import links from '@/data/links';
+import NavLinks from './NavLinks';
 
 type NavigationProps = {
   title?: string;
@@ -11,16 +11,7 @@ function Navigation({ title = 'Alejandro LR' }: NavigationProps) {
         <h1 className='text-xl font-medium'>{title}</h1>
       </div>
       <nav className='flex flex-col items-center justify-center'>
-        <ul className='flex w-full flex-row justify-center gap-2'>
-          {links.map((link) => (
-            <li
-              key={link.name}
-              className='text-md flex-1 cursor-pointer border border-slate-700 bg-slate-800 p-2.5 text-center'
-            >
-              {link.label.toUpperCase()}
-            </li>
-          ))}
-        </ul>
+        <NavLinks />
       </nav>
     </header>
   );

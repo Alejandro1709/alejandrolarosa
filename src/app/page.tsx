@@ -1,7 +1,10 @@
+import Grid from '@/components/Grid';
+import Section from '@/components/layout/Section';
+
 export default function Home() {
   return (
-    <section className='border border-slate-700'>
-      <h1>Hello</h1>
-    </section>
+    <Section>
+      <Grid />
+    </Section>
   );
 }

@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className='flex min-h-screen flex-col gap-2 bg-slate-900 p-4 md:mx-auto md:max-w-screen-md'>
+      <body className='flex min-h-screen flex-col gap-2 bg-slate-900 p-4 xl:mx-auto xl:max-w-screen-md'>
         <Navigation />
         <main className='flex-1'>{children}</main>
       </body>

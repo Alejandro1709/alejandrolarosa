@@ -7,6 +7,11 @@ const links: ILink[] = [
     href: '/',
   },
   {
+    name: 'portfolio',
+    label: 'Portfolio',
+    href: '/portfolio',
+  },
+  {
     name: 'skills',
     label: 'Skills',
     href: '/skills',
