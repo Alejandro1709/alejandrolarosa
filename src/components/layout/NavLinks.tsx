@@ -1,12 +1,15 @@
 'use client';
 
 import links from '@/data/links';
+import { useTabStore } from '@/stores/tabStore';
 import type ILink from '@/types/link';
 import { useState } from 'react';
 import NavLink from './NavLink';
 
 function NavLinks() {
-  const [activeLink, setActiveLink] = useState<ILink>(links[0]);
+  const currentTab = useTabStore((state) => state.currentTab);
+
+  const [activeLink, setActiveLink] = useState<ILink>(links[currentTab]);
 
   return (
     <ul className='flex w-full flex-row justify-center gap-2'>

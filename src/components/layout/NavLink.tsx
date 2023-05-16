@@ -8,8 +8,20 @@ type NavLinkProps = {
 };
 
 function NavLink({ link, active, onClick }: NavLinkProps) {
+  const handleClick = (link: ILink) => {
+    console.log(link);
+    onClick({ ...link, active: !link.active });
+  };
+
   return (
-    <li className='text-md flex-1 cursor-pointer border border-slate-700 bg-slate-800 p-2.5 text-center hover:border-white'>
+    <li
+      className={`text-md flex-1 cursor-pointer border ${
+        active.active && active.name === link.name
+          ? 'hover:border-white'
+          : 'border-slate-700'
+      } bg-slate-800 p-2.5 text-center`}
+      onClick={() => handleClick(link)}
+    >
       {link.label.toUpperCase()}
     </li>
   );
