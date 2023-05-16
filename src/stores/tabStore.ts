@@ -6,6 +6,6 @@ type TabStoreTypes = {
 };
 
 export const useTabStore = create<TabStoreTypes>((set) => ({
-  currentTab: 0,
+  currentTab: 1,
   setCurrentTab: (tab) => set({ currentTab: tab }),
 }));

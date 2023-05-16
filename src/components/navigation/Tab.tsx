@@ -1,3 +1,4 @@
+import { useTabStore } from '@/stores/tabStore';
 import type ITab from '@/types/tab';
 import React from 'react';
 
@@ -8,8 +9,11 @@ type NavLinkProps = {
 };
 
 function Tab({ tab, active, onClick }: NavLinkProps) {
+  const setCurrentTab = useTabStore((state) => state.setCurrentTab);
+
   const handleClick = (tab: ITab) => {
     onClick({ ...tab, active: !tab.active });
+    setCurrentTab(tab.id);
   };
 
   return (
