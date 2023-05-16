@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col'>
+    <section className='bg-red-200'>
       <h1>Hello</h1>
-    </main>
+    </section>
   );
 }
