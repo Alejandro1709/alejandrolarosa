@@ -12,7 +12,10 @@ function Tab({ tab, active, onClick }: NavLinkProps) {
   const setCurrentTab = useTabStore((state) => state.setCurrentTab);
 
   const handleClick = (tab: ITab) => {
+    if (tab.active) return;
+
     onClick({ ...tab, active: !tab.active });
+
     setCurrentTab(tab.id);
   };
 

@@ -9,7 +9,7 @@ import NavLink from './Tab';
 function Tabs() {
   const currentTab = useTabStore((state) => state.currentTab);
 
-  const [activeTab, setActiveTab] = useState<ITab>(tabs[currentTab]);
+  const [activeTab, setActiveTab] = useState<ITab>(tabs[currentTab - 1]);
 
   return (
     <ul className='flex w-full flex-row justify-center gap-2 transition-all duration-200'>
