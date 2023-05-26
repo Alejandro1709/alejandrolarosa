@@ -2,12 +2,49 @@
 
 import { useRef } from "react";
 import { ApiContactRequest } from "@/validators/validator";
+import { useMutation } from "@tanstack/react-query";
 
 function ContactForm() {
   const nameRef = useRef<HTMLInputElement>(null)
   const emailRef = useRef<HTMLInputElement>(null)
   const subjectRef = useRef<HTMLInputElement>(null)
   const messageRef = useRef<HTMLTextAreaElement>(null)
+
+  const handleClearForm = () => {
+    const name = nameRef.current
+    const email = emailRef.current
+    const subject = subjectRef.current
+    const message = messageRef.current
+
+    if (!name || !email || !subject || !message) return
+
+    name.value = ''
+    email.value = ''
+    subject.value = ''
+    message.value = ''
+  };
+
+  const handleSendMail = async ({ name, email, subject, message }: ApiContactRequest) => {
+    const payload: ApiContactRequest = {
+      name,
+      email,
+      subject,
+      message
+    }
+
+    await fetch('/api/mail', {
+      method: 'POST',
+      body: JSON.stringify(payload)
+    })
+  }
+
+  const { mutate, isLoading, error } = useMutation({
+    mutationKey: ['sendEmail'],
+    mutationFn: handleSendMail,
+    onSuccess: () => {
+      handleClearForm()
+    }
+  })
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -19,18 +56,7 @@ function ContactForm() {
 
     if (!name || !email || !subject || !message) return
 
-    const payload: ApiContactRequest = {
-      name,
-      email,
-      subject,
-      message
-    }
-
-    const res = await fetch('/api/mail', {
-      method: 'POST',
-      body: JSON.stringify(payload)
-    })
-    console.log(res)
+    mutate({ name, email, subject, message })
   };
 
   return (
@@ -74,12 +100,14 @@ function ContactForm() {
           ref={messageRef}
         ></textarea>
       </div>
-      <button className='mt-2 rounded-md bg-blue-400 p-2 text-lg font-medium hover:bg-blue-500 active:bg-blue-600'>
+      <button className='mt-2 rounded-md bg-blue-400 p-2 text-lg font-medium hover:bg-blue-500 active:bg-blue-600 disabled:bg-slate-400 disabled:cursor-not-allowed' disabled={isLoading}>
         Send
       </button>
-      <div>
-        <span>Error will be here!!</span>
-      </div>
+      {error ? (
+        <div>
+          <span>Error will be here!!</span>
+        </div>
+      ) : null}
     </form>
   );
 }
