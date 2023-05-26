@@ -1,7 +1,7 @@
 'use client';
 
-import { ApiContactRequest } from "@/validators/validator";
 import { useRef } from "react";
+import { ApiContactRequest } from "@/validators/validator";
 
 function ContactForm() {
   const nameRef = useRef<HTMLInputElement>(null)
@@ -9,7 +9,7 @@ function ContactForm() {
   const subjectRef = useRef<HTMLInputElement>(null)
   const messageRef = useRef<HTMLTextAreaElement>(null)
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const name = nameRef.current?.value
@@ -26,11 +26,11 @@ function ContactForm() {
       message
     }
 
-    fetch('/api/mail', {
+    const res = await fetch('/api/mail', {
       method: 'POST',
       body: JSON.stringify(payload)
     })
-    console.log(payload)
+    console.log(res)
   };
 
   return (
@@ -77,6 +77,9 @@ function ContactForm() {
       <button className='mt-2 rounded-md bg-blue-400 p-2 text-lg font-medium hover:bg-blue-500 active:bg-blue-600'>
         Send
       </button>
+      <div>
+        <span>Error will be here!!</span>
+      </div>
     </form>
   );
 }

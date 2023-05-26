@@ -1,11 +1,11 @@
 import { contactRequestValidator } from "@/validators/validator";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
 const mail = require('@sendgrid/mail')
 
 mail.setApiKey(process.env.SENDGRID_API_KEY)
 
-export async function POST(request: NextRequest) {
+export async function POST(request: Request) {
   const body = await request.json()
 
   try {
@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
     `;
 
     const data = {
-      to: 'alejandro.lr.developer@hotmail.com',
+      to: 'contacto@alejandrolarosa.com',
       from: 'hola@alejandrolarosa.com',
       subject: 'Nuevo correo del formulario de contacto!',
       text: messagee,
@@ -29,6 +29,7 @@ export async function POST(request: NextRequest) {
     mail.send(data)
 
   } catch (error) {
+    console.log(error)
     return new NextResponse('Unprocessessable entity')
   }
 
