@@ -30,8 +30,7 @@ function Skills() {
       <Skill language='MySQL' level={75} />
       <Skill language='Git' level={80} />
       <Skill language='Github' level={80} />
-      <Skill language='Docker' level={35} />
-      <Skill language='Python' level={45} />
+      <Skill language='Docker' level={55} />
     </ul>
   );
 }

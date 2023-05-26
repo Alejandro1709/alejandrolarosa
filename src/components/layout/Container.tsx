@@ -1,6 +1,7 @@
 'use client';
 
 import { useTabStore } from '@/stores/tabStore';
+import Contact from '../Contact';
 import Grid from '../Grid';
 import Skills from '../Skills';
 
@@ -13,6 +14,8 @@ function Container() {
     <Grid />
   ) : currentTab === 3 ? (
     <Skills />
+  ) : currentTab === 4 ? (
+    <Contact />
   ) : null;
 }
 
