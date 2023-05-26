@@ -1,9 +1,9 @@
 'use client';
 
+import { useState } from 'react';
 import tabs from '@/data/tabs';
 import { useTabStore } from '@/stores/tabStore';
 import type ITab from '@/types/tab';
-import { useState } from 'react';
 import NavLink from './Tab';
 
 function Tabs() {

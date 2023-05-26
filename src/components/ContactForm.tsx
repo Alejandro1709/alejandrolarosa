@@ -3,12 +3,15 @@
 import { useRef } from "react";
 import { ApiContactRequest } from "@/validators/validator";
 import { useMutation } from "@tanstack/react-query";
+import { useTabStore } from "@/stores/tabStore";
 
 function ContactForm() {
   const nameRef = useRef<HTMLInputElement>(null)
   const emailRef = useRef<HTMLInputElement>(null)
   const subjectRef = useRef<HTMLInputElement>(null)
   const messageRef = useRef<HTMLTextAreaElement>(null)
+
+  const setCurrentTab = useTabStore((state) => state.setCurrentTab)
 
   const handleClearForm = () => {
     const name = nameRef.current
@@ -42,7 +45,7 @@ function ContactForm() {
     mutationKey: ['sendEmail'],
     mutationFn: handleSendMail,
     onSuccess: () => {
-      handleClearForm()
+      setCurrentTab(1)
     }
   })
 

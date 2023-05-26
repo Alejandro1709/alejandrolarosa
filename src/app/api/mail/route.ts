@@ -19,14 +19,14 @@ export async function POST(request: Request) {
     `;
 
     const data = {
-      to: 'contacto@alejandrolarosa.com',
+      to: 'alejandrolarosa11apps@hotmail.com',
       from: 'hola@alejandrolarosa.com',
       subject: 'Nuevo correo del formulario de contacto!',
       text: messagee,
       html: messagee.replace(/\r\n/g, '<br>')
     }
 
-    mail.send(data)
+    await mail.send(data)
 
   } catch (error) {
     console.log(error)
