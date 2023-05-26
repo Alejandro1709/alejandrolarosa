@@ -1,8 +1,36 @@
 'use client';
 
+import { ApiContactRequest } from "@/validators/validator";
+import { useRef } from "react";
+
 function ContactForm() {
+  const nameRef = useRef<HTMLInputElement>(null)
+  const emailRef = useRef<HTMLInputElement>(null)
+  const subjectRef = useRef<HTMLInputElement>(null)
+  const messageRef = useRef<HTMLTextAreaElement>(null)
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const name = nameRef.current?.value
+    const email = emailRef.current?.value
+    const subject = subjectRef.current?.value
+    const message = messageRef.current?.value
+
+    if (!name || !email || !subject || !message) return
+
+    const payload: ApiContactRequest = {
+      name,
+      email,
+      subject,
+      message
+    }
+
+    fetch('/api/mail', {
+      method: 'POST',
+      body: JSON.stringify(payload)
+    })
+    console.log(payload)
   };
 
   return (
@@ -14,6 +42,7 @@ function ContactForm() {
           id='name'
           type='text'
           placeholder='John Doe'
+          ref={nameRef}
         />
       </div>
       <div className='flex flex-col gap-1'>
@@ -23,6 +52,7 @@ function ContactForm() {
           id='email'
           type='text'
           placeholder='johndoe@example.com'
+          ref={emailRef}
         />
       </div>
       <div className='flex flex-col gap-1'>
@@ -32,6 +62,7 @@ function ContactForm() {
           id='subject'
           type='text'
           placeholder='App Idea'
+          ref={subjectRef}
         />
       </div>
       <div className='flex flex-col gap-1'>
@@ -40,6 +71,7 @@ function ContactForm() {
           className='resize-none border border-slate-600 bg-slate-700 p-2 text-white'
           id='message'
           placeholder='Your message goes here'
+          ref={messageRef}
         ></textarea>
       </div>
       <button className='mt-2 rounded-md bg-blue-400 p-2 text-lg font-medium hover:bg-blue-500 active:bg-blue-600'>
