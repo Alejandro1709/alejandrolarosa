@@ -6,9 +6,9 @@ const mail = require('@sendgrid/mail')
 mail.setApiKey(process.env.SENDGRID_API_KEY)
 
 export async function POST(request: Request) {
-  const body = await request.json()
-
   try {
+    const body = await request.json()
+
     const { name, email, subject, message } = contactRequestValidator.parse(body)
 
     const messagee = `
@@ -19,14 +19,20 @@ export async function POST(request: Request) {
     `;
 
     const data = {
-      to: 'alejandrolarosa11apps@hotmail.com',
+      to: 'contacto@alejandrolarosa.com',
       from: 'hola@alejandrolarosa.com',
       subject: 'Nuevo correo del formulario de contacto!',
       text: messagee,
       html: messagee.replace(/\r\n/g, '<br>')
     }
 
-    await mail.send(data)
+    try {
+      await mail.send(data)
+
+      return NextResponse.json({ message: 'Mail Sent!' })
+    } catch (err) {
+      console.log(err)
+    }
 
   } catch (error) {
     console.log(error)
