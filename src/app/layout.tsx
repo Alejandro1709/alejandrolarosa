@@ -5,7 +5,7 @@ import './globals.css';
 
 export const metadata = {
   title: 'Alejandro LR',
-  description: 'Alejandro LR is a software engineer based on Lima, Peru.',
+  description: 'My name is Alejandro LR, a talented software engineer based in Lima, Peru. With expertise in various programming languages and a passion for creating efficient and scalable solutions, I strive to deliver high-quality software that exceeds expectations. Explore my portfolio and discover how I can help you transform your ideas into reality.',
 };
 
 export default function RootLayout({
