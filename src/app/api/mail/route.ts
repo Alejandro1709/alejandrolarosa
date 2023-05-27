@@ -26,18 +26,12 @@ export async function POST(request: Request) {
       html: messagee.replace(/\r\n/g, '<br>')
     }
 
-    try {
-      await mail.send(data)
+    await mail.send(data)
 
-      return NextResponse.json({ message: 'Mail Sent!' })
-    } catch (err) {
-      console.log(err)
-    }
+    return NextResponse.json({ message: 'Hello Mail' })
 
   } catch (error) {
     console.log(error)
     return new NextResponse('Unprocessessable entity')
   }
-
-  return NextResponse.json({ message: 'Hello Mail' })
 }

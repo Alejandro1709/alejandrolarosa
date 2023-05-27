@@ -44,8 +44,7 @@ function ContactForm() {
   const { mutate, isLoading, error } = useMutation({
     mutationKey: ['sendEmail'],
     mutationFn: handleSendMail,
-    onSuccess: (data) => {
-      console.log(data)
+    onSuccess: () => {
       setCurrentTab(1)
     }
   })
