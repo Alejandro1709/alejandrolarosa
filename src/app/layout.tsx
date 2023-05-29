@@ -29,7 +29,7 @@ export default function RootLayout({
           <main className='flex-1'>{children}</main>
           <Footer />
         </QueryProvider>
-        <Analytics />
+        {/* <Analytics /> */}
         <Script id='onRouteChange'>{`
          (function(h,o,t,j,a,r){
           h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
