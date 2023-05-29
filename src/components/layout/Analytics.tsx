@@ -10,12 +10,12 @@ function Analytics() {
   useEffect(() => {
     Hotjar.init(siteId, hotjarVersion);
 
+    const onRouteChange = () => Hotjar.init
+
     window.addEventListener("routeChange", onRouteChange);
     return () => window.removeEventListener("routeChange", onRouteChange);
 
   }, [])
-
-  const onRouteChange = () => Hotjar.identify
 
   return null
 }
