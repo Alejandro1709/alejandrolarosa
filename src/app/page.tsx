@@ -1,10 +1,5 @@
-import Container from '@/components/layout/Container';
-import Section from '@/components/layout/Section';
+import Grid from '@/components/Grid';
 
 export default function Home() {
-  return (
-    <Section>
-      <Container />
-    </Section>
-  );
+  return <Grid />
 }
