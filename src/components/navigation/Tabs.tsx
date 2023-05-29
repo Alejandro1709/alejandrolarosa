@@ -1,24 +1,15 @@
 'use client';
 
-import { useState } from 'react';
 import tabs from '@/data/tabs';
-import { useTabStore } from '@/stores/tabStore';
-import type ITab from '@/types/tab';
 import NavLink from './Tab';
 
 function Tabs() {
-  const currentTab = useTabStore((state) => state.currentTab);
-
-  const [activeTab, setActiveTab] = useState<ITab>(tabs[currentTab - 1]);
-
   return (
-    <ul className='flex w-full flex-row justify-center gap-2 transition-all duration-200'>
+    <ul className='flex w-full flex-row justify-center items-start gap-2 transition-all duration-200'>
       {tabs.map((tab) => (
         <NavLink
           key={tab.name}
           tab={tab}
-          active={activeTab}
-          onClick={setActiveTab}
         />
       ))}
     </ul>
