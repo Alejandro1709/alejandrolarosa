@@ -1,7 +1,9 @@
 import Navigation from '@/components/navigation';
 import QueryProvider from '@/components/QueryProvider';
 import Footer from '@/components/navigation/Footer';
+import Script from 'next/script';
 import './globals.css';
+import Analytics from '@/components/layout/Analytics';
 
 export const metadata = {
   generator: 'Next.js',
@@ -27,6 +29,18 @@ export default function RootLayout({
           <main className='flex-1'>{children}</main>
           <Footer />
         </QueryProvider>
+        <Analytics />
+        <Script id='onRouteChange'>{`
+         (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:3512046,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        `}
+        </Script>
       </body>
     </html>
   );
