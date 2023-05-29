@@ -3,7 +3,6 @@ import QueryProvider from '@/components/QueryProvider';
 import Footer from '@/components/navigation/Footer';
 import Script from 'next/script';
 import './globals.css';
-import Analytics from '@/components/layout/Analytics';
 
 export const metadata = {
   generator: 'Next.js',
