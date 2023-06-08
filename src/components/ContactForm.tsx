@@ -41,6 +41,10 @@ function ContactForm() {
       setCurrentTab(1);
       setAlert('Email sent successfully!', 'success');
     },
+    onError(error) {
+      console.log(error);
+      setAlert('Error sending email!', 'error');
+    },
   });
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
