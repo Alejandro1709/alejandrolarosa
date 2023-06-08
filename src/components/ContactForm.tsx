@@ -1,65 +1,59 @@
 'use client';
 
-import { useRef } from "react";
-import { ApiContactRequest } from "@/validators/validator";
-import { useMutation } from "@tanstack/react-query";
-import { useTabStore } from "@/stores/tabStore";
+import { useAlertStore } from '@/stores/alertStore';
+import { useTabStore } from '@/stores/tabStore';
+import { ApiContactRequest } from '@/validators/validator';
+import { useMutation } from '@tanstack/react-query';
+import { useRef } from 'react';
 
 function ContactForm() {
-  const nameRef = useRef<HTMLInputElement>(null)
-  const emailRef = useRef<HTMLInputElement>(null)
-  const subjectRef = useRef<HTMLInputElement>(null)
-  const messageRef = useRef<HTMLTextAreaElement>(null)
+  const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const subjectRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
 
-  const setCurrentTab = useTabStore((state) => state.setCurrentTab)
+  const setCurrentTab = useTabStore((state) => state.setCurrentTab);
+  const setAlert = useAlertStore((state) => state.setAlert);
 
-  const handleClearForm = () => {
-    const name = nameRef.current
-    const email = emailRef.current
-    const subject = subjectRef.current
-    const message = messageRef.current
-
-    if (!name || !email || !subject || !message) return
-
-    name.value = ''
-    email.value = ''
-    subject.value = ''
-    message.value = ''
-  };
-
-  const handleSendMail = async ({ name, email, subject, message }: ApiContactRequest) => {
+  const handleSendMail = async ({
+    name,
+    email,
+    subject,
+    message,
+  }: ApiContactRequest) => {
     const payload: ApiContactRequest = {
       name,
       email,
       subject,
-      message
-    }
+      message,
+    };
 
     await fetch('/api/mail', {
       method: 'POST',
-      body: JSON.stringify(payload)
-    })
-  }
+      body: JSON.stringify(payload),
+    });
+  };
 
   const { mutate, isLoading, error } = useMutation({
     mutationKey: ['sendEmail'],
     mutationFn: handleSendMail,
     onSuccess: () => {
-      setCurrentTab(1)
-    }
-  })
+      setCurrentTab(1);
+      setAlert('Email sent successfully!', 'success');
+    },
+  });
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const name = nameRef.current?.value
-    const email = emailRef.current?.value
-    const subject = subjectRef.current?.value
-    const message = messageRef.current?.value
+    const name = nameRef.current?.value;
+    const email = emailRef.current?.value;
+    const subject = subjectRef.current?.value;
+    const message = messageRef.current?.value;
 
-    if (!name || !email || !subject || !message) return
+    if (!name || !email || !subject || !message) return;
 
-    mutate({ name, email, subject, message })
+    mutate({ name, email, subject, message });
   };
 
   return (
@@ -103,7 +97,10 @@ function ContactForm() {
           ref={messageRef}
         ></textarea>
       </div>
-      <button className='mt-2 rounded-md bg-blue-400 p-2 text-lg font-medium hover:bg-blue-500 active:bg-blue-600 disabled:bg-slate-400 disabled:cursor-not-allowed' disabled={isLoading}>
+      <button
+        className='mt-2 rounded-md bg-blue-400 p-2 text-lg font-medium hover:bg-blue-500 active:bg-blue-600 disabled:cursor-not-allowed disabled:bg-slate-400'
+        disabled={isLoading}
+      >
         Send
       </button>
       {error ? (
