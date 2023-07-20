@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className='flex min-h-screen flex-col'>
-        <main className='flex-1'>{children}</main>
+        <div className='flex-1'>{children}</div>
         {/* <Analytics /> */}
         <Script id='onRouteChange'>
           {`
