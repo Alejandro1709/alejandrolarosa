@@ -14,6 +14,10 @@ export default function Home() {
           </h3>
         </header>
       </section>
+
+      <section id='about' className='my-8 flex flex-col items-center border'>
+        <h2>LOOL</h2>
+      </section>
     </div>
   );
 }

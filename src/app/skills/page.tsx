@@ -1,11 +1,11 @@
-import Skills from "@/components/Skills"
+import Skills from '@/old-components/Skills';
 
 export const metadata = {
-  title: 'Alejandro LR | Skills'
+  title: 'Alejandro LR | Skills',
 };
 
 function SkillsPage() {
-  return <Skills />
+  return <Skills />;
 }
 
-export default SkillsPage
+export default SkillsPage;
