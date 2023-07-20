@@ -1,5 +1,7 @@
-import Grid from '@/components/Grid';
-
 export default function Home() {
-  return <Grid />
+  return (
+    <div>
+      <h1>Hello</h1>
+    </div>
+  );
 }
