@@ -6,7 +6,7 @@ function Hero() {
   return (
     <section
       id='hero'
-      className='mt-16 flex flex-col items-center gap-8 lg:mt-28 lg:flex-row lg:gap-20'
+      className='mt-10 flex flex-col items-center gap-8 lg:mt-16 lg:flex-row lg:gap-20'
     >
       <header className='flex flex-col items-center gap-6 text-center font-bold uppercase text-white lg:w-[65%] lg:gap-8 lg:text-left'>
         <h1 className='text-4xl leading-snug tracking-wider sm:text-5xl md:text-6xl'>
@@ -20,7 +20,7 @@ function Hero() {
             Hire Me!
           </Button>
 
-          <Socials />
+          <Socials size='lg' />
         </div>
       </header>
       <Hobbies />
