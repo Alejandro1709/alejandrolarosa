@@ -16,7 +16,9 @@ function Hero() {
           I&apos;m a software engineer.
         </h3>
         <div className='mt-4 flex flex-shrink-0 flex-row gap-8 lg:self-start'>
-          <Button>Hire Me!</Button>
+          <Button className='bg-purple-400 hover:bg-indigo-300'>
+            Hire Me!
+          </Button>
 
           <Socials />
         </div>
