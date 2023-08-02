@@ -1,63 +1,6 @@
-import { BsGithub, BsInstagram, BsLinkedin, BsYoutube } from 'react-icons/bs';
-
-const hobbies = [
-  {
-    id: 1,
-    name: 'Reading',
-  },
-  {
-    id: 2,
-    name: 'Gaming',
-  },
-  {
-    id: 3,
-    name: 'Coding',
-  },
-  {
-    id: 4,
-    name: 'Music',
-  },
-  {
-    id: 5,
-    name: 'Movies',
-  },
-  {
-    id: 6,
-    name: 'Theatre',
-  },
-  {
-    id: 7,
-    name: 'Biking',
-  },
-  {
-    id: 8,
-    name: 'Hiking',
-  },
-  {
-    id: 9,
-    name: 'Gym',
-  },
-  {
-    id: 10,
-    name: 'Persistent',
-  },
-  {
-    id: 11,
-    name: 'Curious',
-  },
-  {
-    id: 12,
-    name: 'Creative',
-  },
-  {
-    id: 13,
-    name: 'Team Player',
-  },
-  {
-    id: 14,
-    name: 'Problem Solver',
-  },
-];
+import Button from './ui/Button';
+import Hobbies from './ui/Hobbies';
+import Socials from './ui/Socials';
 
 function Hero() {
   return (
@@ -73,54 +16,12 @@ function Hero() {
           I&apos;m a software engineer.
         </h3>
         <div className='mt-4 flex flex-shrink-0 flex-row gap-8 lg:self-start'>
-          <button className='rounded-md bg-purple-400 px-4 py-2 transition-all hover:bg-indigo-300 active:scale-95'>
-            Hire Me!
-          </button>
+          <Button>Hire Me!</Button>
 
-          <div className='flex flex-row items-center gap-2'>
-            <a
-              href='https://github.com/alejandro1709'
-              className='flex h-9 w-9 items-center justify-center rounded-md bg-[#181818] hover:bg-black'
-              target='_blank'
-            >
-              <BsGithub />
-            </a>
-            <a
-              href='https://instagram.com/alepeusts99'
-              className='flex h-9 w-9 items-center justify-center rounded-md bg-[#181818] hover:bg-black'
-              target='_blank'
-            >
-              <BsInstagram />
-            </a>
-            <a
-              href='https://linkedin.com/in/alejandro-la-rosa-4497a995'
-              className='flex h-9 w-9 items-center justify-center rounded-md bg-[#181818] hover:bg-black'
-              target='_blank'
-            >
-              <BsLinkedin />
-            </a>
-            <a
-              href='https://www.youtube.com/@alefsdev'
-              className='flex h-9 w-9 items-center justify-center rounded-md bg-[#181818] hover:bg-black'
-              target='_blank'
-            >
-              <BsYoutube />
-            </a>
-          </div>
+          <Socials />
         </div>
       </header>
-      <div className='hidden self-start lg:flex lg:flex-1'>
-        <ul className='flex flex-wrap justify-center gap-2 lg:grid lg:grid-cols-3 lg:self-end'>
-          {hobbies.map((hobbie) => (
-            <li
-              key={hobbie.id}
-              className='rounded-md bg-[#181818] px-4 py-2 text-sm font-medium text-white lg:text-center'
-            >
-              {hobbie.name}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <Hobbies />
     </section>
   );
 }
