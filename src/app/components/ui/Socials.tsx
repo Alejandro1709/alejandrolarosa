@@ -1,4 +1,4 @@
-import { BsGithub, BsInstagram, BsLinkedin, BsYoutube } from 'react-icons/bs';
+import { socialLinks } from '@/data/links';
 import Social from './Social';
 
 type SocialsProps = {
@@ -7,12 +7,11 @@ type SocialsProps = {
 
 function Socials({ size = 'md' }: SocialsProps) {
   return (
-    <div className='flex flex-row items-center gap-2'>
-      <Social Icon={BsGithub} size={size} />
-      <Social Icon={BsInstagram} size={size} />
-      <Social Icon={BsLinkedin} size={size} />
-      <Social Icon={BsYoutube} size={size} />
-    </div>
+    <ul className='flex flex-row items-center gap-2'>
+      {socialLinks.map((link) => (
+        <Social key={link.href} Icon={link.Icon} size={size} href={link.href} />
+      ))}
+    </ul>
   );
 }
 

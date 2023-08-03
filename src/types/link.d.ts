@@ -4,3 +4,8 @@ export default interface ILink {
   label: string;
   href: string;
 }
+
+export interface ISocialLink extends ILink {
+  Icon: React.FC;
+  href: string;
+}

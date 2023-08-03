@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Socials from './Socials';
 
 function ProjectCard() {
   return (
@@ -9,7 +8,9 @@ function ProjectCard() {
         <div className='m-4 flex flex-col gap-3'>
           <div className='flex flex-row justify-between'>
             <h2 className='text-2xl font-bold'>Project Title</h2>
-            <Socials size='sm' />
+            <span className='rounded-2xl bg-yellow-300 p-1.5 text-sm font-semibold text-black'>
+              WIP
+            </span>
           </div>
           <p className='max-w-xs'>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi nulla
