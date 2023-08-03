@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import Links from './Links';
 
 type NavbarProps = {
   isIntersecting: boolean;
@@ -16,12 +16,7 @@ function Navbar({ isIntersecting }: NavbarProps) {
       } items-center justify-center transition-all duration-100`}
     >
       <ul className='mx-10 flex w-full flex-row gap-8 text-lg font-bold md:mx-auto md:max-w-screen-md lg:mx-auto lg:max-w-screen-lg'>
-        <li>
-          <Link href='/#hero'>Home</Link>
-        </li>
-        <li>
-          <Link href='/#projects'>Projects</Link>
-        </li>
+        <Links />
       </ul>
     </nav>
   );

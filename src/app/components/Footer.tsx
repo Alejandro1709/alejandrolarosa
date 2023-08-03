@@ -1,3 +1,4 @@
+import Links from './ui/Links';
 import Socials from './ui/Socials';
 
 function Footer() {
@@ -6,12 +7,7 @@ function Footer() {
       <aside className='hidden flex-col space-y-4 lg:flex'>
         <h3 className='text-3xl'>Site Map</h3>
         <ul className='flex flex-col space-y-2'>
-          <a href='#hero'>
-            <li>Home</li>
-          </a>
-          <a href='#projects'>
-            <li>Projects</li>
-          </a>
+          <Links />
         </ul>
       </aside>
       <h3 className='text-xl font-medium lg:self-end'>© 2023 Alejandro LR.</h3>

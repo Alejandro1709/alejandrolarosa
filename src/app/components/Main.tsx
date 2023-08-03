@@ -16,7 +16,7 @@ function Main() {
   return (
     <>
       <Navbar isIntersecting={isIntersecting} />
-      <div className='mx-6 space-y-14 scroll-smooth md:mx-auto md:max-w-screen-md lg:mx-auto lg:max-w-screen-lg'>
+      <div className='mx-6 space-y-14 md:mx-auto md:max-w-screen-md lg:mx-auto lg:max-w-screen-lg'>
         <Hero id='hero' ref={heroRef} />
         <Projects id='projects' />
         <Footer />
