@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className='flex min-h-screen flex-col scroll-smooth'>
+      <body className='flex min-h-screen flex-col'>
         <div className='flex-1'>{children}</div>
         {/* <Analytics /> */}
         <Script id='onRouteChange'>
