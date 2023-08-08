@@ -16,6 +16,18 @@ const links: ILink[] = [
     label: 'Projects',
     href: '#projects',
   },
+  {
+    id: 3,
+    name: 'skills',
+    label: 'Skills',
+    href: '#skills',
+  },
+  {
+    id: 4,
+    name: 'experience',
+    label: 'Experience',
+    href: '#experience',
+  },
 ];
 
 export const socialLinks: ISocialLink[] = [
