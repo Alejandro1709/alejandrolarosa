@@ -1,3 +1,4 @@
+'use client';
 /* eslint-disable react/display-name */
 import { forwardRef } from 'react';
 import Button from './ui/Button';
@@ -9,6 +10,14 @@ type HeroProps = {
 };
 
 const Hero = forwardRef<HTMLHeadingElement, HeroProps>(({ id }, ref) => {
+  const handleCtaClick = () => {
+    console.log('clicked');
+    window.scrollTo({
+      top: document.getElementById('contact')!.offsetTop,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <section
       id={id}
@@ -25,7 +34,10 @@ const Hero = forwardRef<HTMLHeadingElement, HeroProps>(({ id }, ref) => {
           I&apos;m a software engineer.
         </h3>
         <div className='mt-4 flex flex-shrink-0 flex-row gap-8 lg:self-start'>
-          <Button className='bg-purple-400 hover:bg-indigo-300'>
+          <Button
+            className='bg-purple-400 hover:bg-indigo-300'
+            onClick={handleCtaClick}
+          >
             Hire Me!
           </Button>
 

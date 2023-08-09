@@ -6,7 +6,7 @@ function Footer() {
     <footer className='flex flex-col items-center gap-6 pb-6 lg:flex-row lg:justify-between'>
       <aside className='hidden flex-col space-y-4 lg:flex'>
         <h3 className='text-3xl'>Site Map</h3>
-        <ul className='flex flex-col space-y-2'>
+        <ul className='grid grid-cols-2 gap-2'>
           <Links />
         </ul>
       </aside>

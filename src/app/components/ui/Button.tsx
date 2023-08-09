@@ -4,7 +4,12 @@ interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   type?: 'button' | 'submit' | 'reset';
 }
 
-function Button({ className, children, type = 'button' }: ButtonProps) {
+function Button({
+  className,
+  children,
+  type = 'button',
+  onClick,
+}: ButtonProps) {
   return (
     <button
       className={twMerge(
@@ -12,6 +17,7 @@ function Button({ className, children, type = 'button' }: ButtonProps) {
         className
       )}
       type={type}
+      onClick={onClick}
     >
       {children}
     </button>
