@@ -1,3 +1,4 @@
+'use client';
 import FilterBar from './ui/FilterBar';
 import SkillsList from './ui/SkillsList';
 
