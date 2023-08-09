@@ -1,3 +1,9 @@
+import { sendEmail } from '@/services/mail';
+import { useContactFormState } from '@/stores/contactFormState';
+import {
+  QueryErrorResetBoundaryProps,
+  useMutation,
+} from '@tanstack/react-query';
 import { Field, Form, Formik } from 'formik';
 import * as z from 'zod';
 import { toFormikValidationSchema } from 'zod-formik-adapter';
@@ -18,18 +24,45 @@ function ContactForm() {
       .max(50, 'Too Long!'),
     message: z
       .string({ required_error: 'Provide a message' })
-      .min(2, 'Too Short!')
-      .max(200, 'Too Long!'),
+      .min(2, 'Too Short!'),
   });
 
   type ContactFormSchema = z.infer<typeof contactFormSchema>;
+
+  const setIsSuccess = useContactFormState((state) => state.setIsSuccess);
+  const setIsError = useContactFormState((state) => state.setIsError);
+  const setError = useContactFormState((state) => state.setError);
+
+  const { mutate, isLoading } = useMutation({
+    mutationKey: ['contactForm'],
+    mutationFn: sendEmail,
+    onSuccess: () => {
+      setIsSuccess(true);
+    },
+    onError: (error: QueryErrorResetBoundaryProps) => {
+      setIsError(true);
+      setError(error.children?.toString() || 'Something went wrong');
+    },
+  });
 
   return (
     <Formik<ContactFormSchema>
       initialValues={{ name: '', email: '', subject: '', message: '' }}
       validationSchema={toFormikValidationSchema(contactFormSchema)}
       onSubmit={(values) => {
-        console.log(values);
+        const formData = {
+          name: values.name,
+          email: values.email,
+          subject: values.subject,
+          message: values.message,
+        };
+
+        mutate(formData);
+
+        values.name = '';
+        values.email = '';
+        values.subject = '';
+        values.message = '';
       }}
     >
       {(formikState) => {
@@ -95,8 +128,12 @@ function ContactForm() {
                 <span className='text-red-400'>{errors.message}</span>
               ) : null}
             </div>
-            <Button className='bg-purple-500 hover:bg-purple-400' type='submit'>
-              Send
+            <Button
+              className='bg-purple-500 hover:bg-purple-400'
+              type='submit'
+              disabled={isLoading}
+            >
+              {isLoading ? 'Sending...' : 'Send'}
             </Button>
           </Form>
         );
