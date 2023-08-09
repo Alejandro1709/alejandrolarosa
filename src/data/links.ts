@@ -28,6 +28,12 @@ const links: ILink[] = [
     label: 'Experience',
     href: '#experience',
   },
+  {
+    id: 5,
+    name: 'contact',
+    label: 'Contact',
+    href: '#contact',
+  },
 ];
 
 export const socialLinks: ISocialLink[] = [

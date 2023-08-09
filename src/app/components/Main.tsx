@@ -1,6 +1,7 @@
 'use client';
 
 import { useInView } from 'react-intersection-observer';
+import Contact from './Contact';
 import Experience from './Experience';
 import Footer from './Footer';
 import Hero from './Hero';
@@ -23,6 +24,7 @@ function Main() {
         <Projects id='projects' />
         <Skills id='skills' />
         <Experience id='experience' />
+        <Contact id='contact' />
         <Footer />
       </div>
     </>

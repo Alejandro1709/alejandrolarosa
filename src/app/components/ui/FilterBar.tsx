@@ -2,7 +2,7 @@ import { categories } from '@/data/skills';
 
 function FilterBar() {
   return (
-    <div className='flex flex-row rounded-lg border border-purple-400 bg-black px-4 py-2 shadow-purple-400'>
+    <div className='hidden flex-row rounded-lg border border-purple-400 bg-black px-4 py-2 shadow-purple-400 lg:flex'>
       <ul className='flex flex-wrap items-center gap-2'>
         {categories.map((category) => (
           <li
