@@ -33,7 +33,7 @@ export const categories: SkillCategory[] = [
   },
   {
     id: 8,
-    name: 'Other',
+    name: 'Name',
   },
 ];
 
