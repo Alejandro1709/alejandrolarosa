@@ -2,7 +2,6 @@
 
 import { useInView } from 'react-intersection-observer';
 import Contact from './Contact';
-import Experience from './Experience';
 import Footer from './Footer';
 import Hero from './Hero';
 import Projects from './Projects';
@@ -23,7 +22,7 @@ function Main() {
         <Hero id='hero' ref={heroRef} />
         <Projects id='projects' />
         <Skills id='skills' />
-        <Experience id='experience' />
+        {/* <Experience id='experience' /> */}
         <Contact id='contact' />
         <Footer />
       </div>

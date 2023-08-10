@@ -22,12 +22,12 @@ const links: ILink[] = [
     label: 'Skills',
     href: '#skills',
   },
-  {
-    id: 4,
-    name: 'experience',
-    label: 'Experience',
-    href: '#experience',
-  },
+  // {
+  //   id: 4,
+  //   name: 'experience',
+  //   label: 'Experience',
+  //   href: '#experience',
+  // },
   {
     id: 5,
     name: 'contact',

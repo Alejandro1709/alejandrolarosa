@@ -12,7 +12,7 @@ function NotFound() {
           Uh oh.
         </h1>
         <h2 className='max-w-sm text-center text-2xl font-medium xl:text-3xl'>
-          This page does not exists... Yet
+          This page does not exists... Yet.
         </h2>
         <Link href='/'>Go back home</Link>
       </div>
