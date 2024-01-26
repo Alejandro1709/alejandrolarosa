@@ -1,6 +1,21 @@
 import { useModalStore } from '@/stores/modalStore';
+import type IProject from '@/types/project';
 
-function ProjectCard() {
+type ProjectCardType = {
+  project: IProject;
+};
+
+const renderStatus = (project: IProject) => {
+  return project.status === 'Completed'
+    ? 'bg-green-300'
+    : project.status === 'In Progress'
+    ? 'bg-yellow-300'
+    : project.status === 'Cancelled'
+    ? 'bg-red-300'
+    : 'bg-blue-300';
+};
+
+function ProjectCard({ project }: ProjectCardType) {
   const setIsModalOpen = useModalStore((state) => state.setModal);
 
   return (
@@ -10,16 +25,18 @@ function ProjectCard() {
     >
       <header className='h-[172px] bg-[#181818]'></header>
       <div className='m-4 flex flex-col gap-3'>
-        <div className='flex flex-row justify-between'>
-          <h2 className='text-2xl font-bold'>Project Title</h2>
-          <span className='rounded-2xl bg-yellow-300 p-1.5 text-sm font-semibold text-black'>
-            WIP
+        <div className='flex flex-row flex-wrap justify-between gap-3'>
+          <h2 className='text-2xl font-bold'>{project.title}</h2>
+          <span
+            className={`rounded-2xl ${renderStatus(
+              project
+            )} p-1.5 text-sm font-semibold text-black`}
+          >
+            {project.status}
           </span>
         </div>
         <p className='max-w-xs'>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi nulla
-          deserunt autem perferendis recusandae ad necessitatibus nihil, fugit
-          quam quidem?
+          {project.description.slice(0, 200).concat('...')}
         </p>
       </div>
     </article>
