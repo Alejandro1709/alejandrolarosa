@@ -1,3 +1,5 @@
+import projects from '@/data/projects';
+import type IProject from '@/types/project';
 import ProjectCard from './ui/ProjectCard';
 
 type ProjectsProps = {
@@ -11,11 +13,9 @@ function Projects({ id }: ProjectsProps) {
         projects
       </h2>
       <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3'>
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        {projects.map((project: IProject) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
       </div>
     </section>
   );

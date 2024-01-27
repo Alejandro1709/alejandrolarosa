@@ -58,6 +58,10 @@ const hobbies: IHobby[] = [
     id: 14,
     name: 'Problem Solver',
   },
+  {
+    id: 15,
+    name: 'Coffee Lover',
+  },
 ];
 
 function Hobbies() {
