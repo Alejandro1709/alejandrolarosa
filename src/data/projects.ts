@@ -7,7 +7,8 @@ const projects: IProject[] = [
     slug: 'get-that-home',
     description:
       '¡Bienvenido a GetThatHome! Tu destino confiable para encontrar el hogar perfecto. Ya sea que estés buscando alquilar o comprar una casa o departamento, nuestra plataforma te conecta con una amplia variedad de opciones en diversas ubicaciones. Explora listados actualizados, visualiza imágenes detalladas y encuentra la propiedad que se adapte a tus necesidades y estilo de vida. Nuestra interfaz fácil de usar hace que la búsqueda de tu próximo hogar sea rápida y eficiente. ¡Descubre el lugar ideal para ti con GetThatHome y haz realidad tus sueños de vivir en el hogar perfecto!',
-    thumbnail: '',
+    thumbnail:
+      'https://res.cloudinary.com/dn79mzc6d/image/upload/v1706376261/my_uploads/gth_hxxp7r.jpg',
     status: 'Completed',
     repoUrl: 'https://github.com/Alejandro1709/GetThatHome-Client',
     liveUrl: 'https://getthathome.onrender.com/',
@@ -25,7 +26,8 @@ const projects: IProject[] = [
     slug: 'afhs-api',
     description:
       'Este es un REST API que te permite obtener información de los personajes de la famosa teleserie Peruana: "Al Fondo Hay Sitio".',
-    thumbnail: '',
+    thumbnail:
+      'https://res.cloudinary.com/dn79mzc6d/image/upload/v1706376598/my_uploads/GNAWK53ZLBB3VAB27SWN2JZ7N4_u0n8qm.jpg',
     status: 'Completed',
     repoUrl: 'https://github.com/Alejandro1709/afhs-api',
     liveUrl: 'https://afhsapi.com/',
@@ -37,7 +39,8 @@ const projects: IProject[] = [
     slug: 'afhs-client',
     description:
       'Este es el cliente que te permite obtener información de los personajes de la famosa teleserie Peruana: "Al Fondo Hay Sitio".',
-    thumbnail: '',
+    thumbnail:
+      'https://res.cloudinary.com/dn79mzc6d/image/upload/v1706376598/my_uploads/GNAWK53ZLBB3VAB27SWN2JZ7N4_u0n8qm.jpg',
     status: 'Completed',
     repoUrl: 'https://github.com/Alejandro1709/afhs-showcase',
     liveUrl: 'https://afhsapi.com/',
@@ -55,8 +58,7 @@ const projects: IProject[] = [
     id: 4,
     title: 'Countdown App Clone',
     slug: 'countdown-app-clone',
-    description:
-      '¡Bienvenido a Countdown Clone! La experiencia de cuenta regresiva definitiva que ha llevado la anticipación al siguiente nivel. Inspirada en la popular aplicación original, Countdown Clone te brinda la misma emoción y funcionalidad que amas, pero con un toque personalizado. Personaliza tus eventos con imágenes significativas, ajusta los tonos de notificación y comparte la emoción con tus seres queridos. Experimenta la cuenta regresiva con una interfaz intuitiva y un diseño elegante. ¡No pierdas ni un solo momento y descarga ahora Countdown Clone para hacer cada evento aún más memorable!',
+    description: '[No Description Available]',
     thumbnail: '',
     status: 'In Progress',
     tags: [
@@ -72,8 +74,7 @@ const projects: IProject[] = [
     id: 5,
     title: 'TicketTrek',
     slug: 'tickettrek',
-    description:
-      '¡Bienvenido a Countdown Clone! La experiencia de cuenta regresiva definitiva que ha llevado la anticipación al siguiente nivel. Inspirada en la popular aplicación original, Countdown Clone te brinda la misma emoción y funcionalidad que amas, pero con un toque personalizado. Personaliza tus eventos con imágenes significativas, ajusta los tonos de notificación y comparte la emoción con tus seres queridos. Experimenta la cuenta regresiva con una interfaz intuitiva y un diseño elegante. ¡No pierdas ni un solo momento y descarga ahora Countdown Clone para hacer cada evento aún más memorable!',
+    description: '[No Description Available]',
     thumbnail: '',
     status: 'In Progress',
     tags: [
@@ -89,12 +90,11 @@ const projects: IProject[] = [
     id: 6,
     title: 'Anagram API',
     slug: 'anagram-api',
-    description:
-      '¡Bienvenido a Countdown Clone! La experiencia de cuenta regresiva definitiva que ha llevado la anticipación al siguiente nivel. Inspirada en la popular aplicación original, Countdown Clone te brinda la misma emoción y funcionalidad que amas, pero con un toque personalizado. Personaliza tus eventos con imágenes significativas, ajusta los tonos de notificación y comparte la emoción con tus seres queridos. Experimenta la cuenta regresiva con una interfaz intuitiva y un diseño elegante. ¡No pierdas ni un solo momento y descarga ahora Countdown Clone para hacer cada evento aún más memorable!',
+    description: '[No Description Available]',
     thumbnail: '',
     status: 'In Progress',
     tags: ['Node JS', 'Express', 'JWT', 'MongoDB', 'REST', 'CRUD', 'Backend'],
   },
 ];
 
-export default projects;
+export default projects.toSorted((a, b) => a.title.localeCompare(b.title));
