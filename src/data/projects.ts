@@ -97,4 +97,4 @@ const projects: IProject[] = [
   },
 ];
 
-export default projects.toSorted((a, b) => a.title.localeCompare(b.title));
+export default projects.sort((a, b) => a.title.localeCompare(b.title));
