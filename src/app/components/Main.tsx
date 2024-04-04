@@ -22,7 +22,6 @@ function Main() {
         <Hero id='hero' ref={heroRef} />
         <Projects id='projects' />
         <Skills id='skills' />
-        {/* <Experience id='experience' /> */}
         <Contact id='contact' />
         <Footer />
       </div>
