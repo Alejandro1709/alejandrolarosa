@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import Script from 'next/script';
 import './globals.css';
 
@@ -35,6 +36,7 @@ export default function RootLayout({
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
         `}
         </Script>
+        <Analytics />
       </body>
     </html>
   );
