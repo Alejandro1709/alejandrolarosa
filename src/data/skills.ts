@@ -158,6 +158,16 @@ const skills: ISkill[] = [
     name: 'Figma',
     category: 'Design',
   },
+  {
+    id: 25,
+    name: 'Python',
+    category: 'Language',
+  },
+  {
+    id: 26,
+    name: 'Ruby',
+    category: 'Language',
+  },
 ];
 
 export default skills;
