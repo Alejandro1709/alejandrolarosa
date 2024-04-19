@@ -36,6 +36,17 @@ export default function ProjectPage(props: { params: { slug: string } }) {
             {foundProject?.description ?? 'DESC'}
           </p>
         </div>
+
+        <ul className='flex flex-wrap gap-4'>
+          {foundProject?.tags.map((t) => (
+            <li
+              className='rounded-md bg-[#181818] px-4 py-2 text-sm font-medium text-white lg:text-center'
+              key={t}
+            >
+              {t}
+            </li>
+          ))}
+        </ul>
       </header>
     </section>
   );
