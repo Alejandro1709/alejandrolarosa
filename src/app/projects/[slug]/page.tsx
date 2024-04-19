@@ -16,7 +16,9 @@ export default function ProjectPage(props: { params: { slug: string } }) {
           <h2 className='text-xl font-semibold md:text-2xl'>
             {foundProject?.title}
           </h2>
-          <Button className='bg-purple-400 hover:bg-indigo-300'>Open</Button>
+          <a href={foundProject?.liveUrl ?? '#'} target='_blank'>
+            <Button className='bg-purple-400 hover:bg-indigo-300'>Open</Button>
+          </a>
         </nav>
 
         <div className='flex flex-col gap-4 md:flex-row'>
