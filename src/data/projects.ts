@@ -109,7 +109,7 @@ const projects: IProject[] = [
       'https://res.cloudinary.com/dn79mzc6d/image/upload/v1715191029/my-uploads/desktop-preview_zh0mzj.jpg',
     status: 'Completed',
     repoUrl: 'https://github.com/Alejandro1709/fm-recipe-page',
-    liveUrl: 'tranquil-semifreddo-753e9b.netlify.app/',
+    liveUrl: 'https://tranquil-semifreddo-753e9b.netlify.app/',
     tags: ['HTML', 'Vanilla Css', 'Frontend'],
   },
 ];
