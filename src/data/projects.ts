@@ -99,6 +99,19 @@ const projects: IProject[] = [
       'Frontend',
     ],
   },
+  {
+    id: 5,
+    title: 'FM Recipe Page',
+    slug: 'fm-recipe-page',
+    description:
+      'Una simple pagina hecha con HTML y CSS Puro que muestra una página de una receta.',
+    thumbnail:
+      'https://res.cloudinary.com/dn79mzc6d/image/upload/v1715191029/my-uploads/desktop-preview_zh0mzj.jpg',
+    status: 'Completed',
+    repoUrl: 'https://github.com/Alejandro1709/fm-recipe-page',
+    liveUrl: 'tranquil-semifreddo-753e9b.netlify.app/',
+    tags: ['HTML', 'Vanilla Css', 'Frontend'],
+  },
 ];
 
 export default projects.sort((a, b) => a.title.localeCompare(b.title));
