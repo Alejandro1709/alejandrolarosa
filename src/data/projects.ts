@@ -112,6 +112,18 @@ const projects: IProject[] = [
     liveUrl: 'https://tranquil-semifreddo-753e9b.netlify.app/',
     tags: ['HTML', 'Vanilla Css', 'Frontend'],
   },
+  {
+    id: 6,
+    title: 'Trello Clone',
+    slug: 'trello-clone',
+    description:
+      'Un clon de la app Trello donde puedes crear tus tablas Kanban de manera sencilla',
+    thumbnail: '',
+    status: 'In Progress',
+    repoUrl: '',
+    liveUrl: 'https://trello-clone-six-peach.vercel.app/',
+    tags: ['React JS', 'TypeScript', 'Tailwind CSS', 'Frontend'],
+  },
 ];
 
 export default projects.sort((a, b) => a.title.localeCompare(b.title));
