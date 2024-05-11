@@ -118,7 +118,8 @@ const projects: IProject[] = [
     slug: 'trello-clone',
     description:
       'Un clon de la app Trello donde puedes crear tus tablas Kanban de manera sencilla',
-    thumbnail: '',
+    thumbnail:
+      'https://res.cloudinary.com/dn79mzc6d/image/upload/v1715444584/my-uploads/Screenshot_2024-05-11_at_11.21.44_zprmhd.png',
     status: 'In Progress',
     repoUrl: '',
     liveUrl: 'https://trello-clone-six-peach.vercel.app/',
