@@ -125,6 +125,25 @@ const projects: IProject[] = [
     liveUrl: 'https://trello-clone-six-peach.vercel.app/',
     tags: ['React JS', 'TypeScript', 'Tailwind CSS', 'Frontend'],
   },
+  {
+    id: 7,
+    title: 'Far Away',
+    slug: 'far-away',
+    description:
+      'Una app sencilla que te permite agregar, modificar o eliminar items.',
+    thumbnail:
+      'https://res.cloudinary.com/dn79mzc6d/image/upload/v1716483310/my-uploads/Screenshot_2024-05-23_at_11.54.30_l8mzz3.png',
+    status: 'Completed',
+    repoUrl: 'https://github.com/Alejandro1709/far-away',
+    liveUrl: 'https://far-away-gamma-eight.vercel.app/',
+    tags: [
+      'React JS',
+      'JavaScript',
+      'Vanilla CSS',
+      'Local Storage',
+      'Frontend',
+    ],
+  },
 ];
 
 export default projects.sort((a, b) => a.title.localeCompare(b.title));
