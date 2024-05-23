@@ -82,25 +82,6 @@ const projects: IProject[] = [
   },
   {
     id: 5,
-    title: 'Tic Tac Toe',
-    slug: 'tic-tac-toe',
-    description: 'Un simple juego del famoso tres en raya o tic tac toe.',
-    thumbnail: '',
-    status: 'Completed',
-    repoUrl: 'https://github.com/Alejandro1709/TicTacToe',
-    liveUrl: 'https://tic-tac-toe-sigma-swart.vercel.app/',
-    tags: [
-      'React JS',
-      'Javascript',
-      'Vanilla Css',
-      'ESLint',
-      'Prettier',
-      'Zustand',
-      'Frontend',
-    ],
-  },
-  {
-    id: 5,
     title: 'FM Recipe Page',
     slug: 'fm-recipe-page',
     description:
@@ -124,6 +105,25 @@ const projects: IProject[] = [
     repoUrl: '',
     liveUrl: 'https://trello-clone-six-peach.vercel.app/',
     tags: ['React JS', 'TypeScript', 'Tailwind CSS', 'Frontend'],
+  },
+  {
+    id: 7,
+    title: 'Far Away',
+    slug: 'far-away',
+    description:
+      'Una app sencilla que te permite agregar, modificar o eliminar items.',
+    thumbnail:
+      'https://res.cloudinary.com/dn79mzc6d/image/upload/v1716483310/my-uploads/Screenshot_2024-05-23_at_11.54.30_l8mzz3.png',
+    status: 'Completed',
+    repoUrl: 'https://github.com/Alejandro1709/far-away',
+    liveUrl: 'https://far-away-gamma-eight.vercel.app/',
+    tags: [
+      'React JS',
+      'JavaScript',
+      'Vanilla CSS',
+      'Local Storage',
+      'Frontend',
+    ],
   },
 ];
 
