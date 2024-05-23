@@ -82,25 +82,6 @@ const projects: IProject[] = [
   },
   {
     id: 5,
-    title: 'Tic Tac Toe',
-    slug: 'tic-tac-toe',
-    description: 'Un simple juego del famoso tres en raya o tic tac toe.',
-    thumbnail: '',
-    status: 'Completed',
-    repoUrl: 'https://github.com/Alejandro1709/TicTacToe',
-    liveUrl: 'https://tic-tac-toe-sigma-swart.vercel.app/',
-    tags: [
-      'React JS',
-      'Javascript',
-      'Vanilla Css',
-      'ESLint',
-      'Prettier',
-      'Zustand',
-      'Frontend',
-    ],
-  },
-  {
-    id: 5,
     title: 'FM Recipe Page',
     slug: 'fm-recipe-page',
     description:
