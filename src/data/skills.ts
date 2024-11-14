@@ -89,11 +89,6 @@ const skills: ISkill[] = [
     category: 'Frontend',
   },
   {
-    id: 11,
-    name: 'TRPC',
-    category: 'Backend',
-  },
-  {
     id: 12,
     name: 'Docker',
     category: 'DevOps',
@@ -124,21 +119,6 @@ const skills: ISkill[] = [
     category: 'Database',
   },
   {
-    id: 18,
-    name: 'Redis',
-    category: 'Database',
-  },
-  {
-    id: 19,
-    name: 'Jest',
-    category: 'Testing',
-  },
-  {
-    id: 20,
-    name: 'React Testing Library',
-    category: 'Testing',
-  },
-  {
     id: 21,
     name: 'Cypress',
     category: 'Testing',
@@ -159,13 +139,13 @@ const skills: ISkill[] = [
     category: 'Design',
   },
   {
-    id: 25,
-    name: 'Python',
+    id: 26,
+    name: 'Ruby',
     category: 'Language',
   },
   {
-    id: 26,
-    name: 'Ruby',
+    id: 27,
+    name: 'PHP',
     category: 'Language',
   },
 ];
