@@ -26,7 +26,8 @@ const projects: IProject[] = [
     slug: 'devtree',
     description:
       'Este es una app clone de LinkTree hecha con el MERN Stack donde podrás compartir tus links sociales con tus amigos y familia!',
-    thumbnail: '',
+    thumbnail:
+      'https://res.cloudinary.com/dn79mzc6d/image/upload/c_thumb,w_200,g_face/v1745947656/my-uploads/shioycftqkwyrlehhi9q.png',
     status: 'Completed',
     repoUrl: 'https://github.com/Alejandro1709/devtree',
     liveUrl: 'https://devtree-nine.vercel.app/',
