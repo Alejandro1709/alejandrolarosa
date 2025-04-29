@@ -22,66 +22,28 @@ const projects: IProject[] = [
   },
   {
     id: 2,
-    title: 'AFHS Api',
-    slug: 'afhs-api',
+    title: 'DevTree',
+    slug: 'devtree',
     description:
-      'Este es un REST API que te permite obtener información de los personajes de la famosa teleserie Peruana: "Al Fondo Hay Sitio".',
-    thumbnail:
-      'https://res.cloudinary.com/dn79mzc6d/image/upload/v1706376598/my_uploads/GNAWK53ZLBB3VAB27SWN2JZ7N4_u0n8qm.jpg',
-    status: 'Completed',
-    repoUrl: 'https://github.com/Alejandro1709/afhs-api',
-    liveUrl: 'https://afhsapi.com/',
-    tags: ['Node JS', 'Express', 'JWT', 'MongoDB', 'REST', 'CRUD', 'Backend'],
-  },
-  {
-    id: 3,
-    title: 'AFHS Client',
-    slug: 'afhs-client',
-    description:
-      'Este es el cliente que te permite obtener información de los personajes de la famosa teleserie Peruana: "Al Fondo Hay Sitio".',
-    thumbnail:
-      'https://res.cloudinary.com/dn79mzc6d/image/upload/v1706376598/my_uploads/GNAWK53ZLBB3VAB27SWN2JZ7N4_u0n8qm.jpg',
-    status: 'Completed',
-    repoUrl: 'https://github.com/Alejandro1709/afhs-showcase',
-    liveUrl: 'https://afhsapi.com/',
-    tags: [
-      'React JS',
-      'Typescript',
-      'Vite',
-      'Tailwind CSS',
-      'ESLint',
-      'Prettier',
-      'Frontend',
-    ],
-  },
-  {
-    id: 4,
-    title: 'Countdown App Clone',
-    slug: 'countdown-app-clone',
-    description:
-      'Esta app te permite crear tus countdown para que sepas cuanto falta para que llegue ese dia tan preciado.',
+      'Este es una app clone de LinkTree hecha con el MERN Stack donde podrás compartir tus links sociales con tus amigos y familia!',
     thumbnail: '',
-    status: 'In Progress',
-    repoUrl: 'https://github.com/Alejandro1709/my-countdowns',
-    liveUrl: 'https://my-countdowns-production.up.railway.app/',
+    status: 'Completed',
+    repoUrl: 'https://github.com/Alejandro1709/devtree',
+    liveUrl: 'https://devtree-nine.vercel.app/',
     tags: [
-      'Next JS',
-      'Typescript',
+      'Node JS',
+      'Express',
+      'React',
       'Tailwind CSS',
-      'ESLint',
-      'Prettier',
-      'Prisma',
-      'PostgreSQL',
-      'Shadcnui',
-      'Tanstack Query',
-      'Zustand',
-      'Next Auth',
-      'Frontend',
+      'JWT',
+      'MongoDB',
+      'REST',
+      'CRUD',
       'Backend',
     ],
   },
   {
-    id: 5,
+    id: 3,
     title: 'FM Recipe Page',
     slug: 'fm-recipe-page',
     description:
@@ -94,7 +56,7 @@ const projects: IProject[] = [
     tags: ['HTML', 'Vanilla Css', 'Frontend'],
   },
   {
-    id: 6,
+    id: 4,
     title: 'Trello Clone',
     slug: 'trello-clone',
     description:
@@ -107,7 +69,7 @@ const projects: IProject[] = [
     tags: ['React JS', 'TypeScript', 'Tailwind CSS', 'Frontend'],
   },
   {
-    id: 7,
+    id: 5,
     title: 'Far Away',
     slug: 'far-away',
     description:

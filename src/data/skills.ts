@@ -119,33 +119,33 @@ const skills: ISkill[] = [
     category: 'Database',
   },
   {
-    id: 21,
-    name: 'Cypress',
-    category: 'Testing',
-  },
-  {
-    id: 22,
+    id: 18,
     name: 'Git',
     category: 'Other',
   },
   {
-    id: 23,
+    id: 19,
     name: 'Nest JS',
     category: 'Backend',
   },
   {
-    id: 24,
+    id: 20,
     name: 'Figma',
     category: 'Design',
   },
   {
-    id: 26,
+    id: 21,
     name: 'Ruby',
     category: 'Language',
   },
   {
-    id: 27,
+    id: 22,
     name: 'PHP',
+    category: 'Language',
+  },
+  {
+    id: 23,
+    name: 'Java',
     category: 'Language',
   },
 ];
